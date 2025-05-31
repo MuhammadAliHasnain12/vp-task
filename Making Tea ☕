@@ -1,0 +1,27 @@
+using System;
+
+namespace ConsoleApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Make Tea");
+            Console.WriteLine("Add Some Water");
+            Console.WriteLine("Add Tea Leaves");
+            Console.WriteLine("Add Sugar");
+            Console.WriteLine("Boil for 5 minutes");
+a
+            string result = MakeTea();
+            Console.WriteLine(result);
+
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+
+        static string MakeTea()
+        {
+            return "Tea Ready";
+        }
+    }
+}
