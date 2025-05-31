@@ -1,0 +1,61 @@
+using System;
+
+class A
+{
+    public int Sum(int a, int b)
+    {
+        return (a + b);
+    }
+}
+
+class B : A
+{
+    
+    public new int Sum(int x, int y)
+    {
+        return (x - y);
+    }
+}
+
+class C
+{
+    public int Mul(int c, int f)
+    {
+        return (c * f);
+    }
+}
+
+class D
+{
+    public float Div(float k, float e)
+    {
+        if (e == 0)
+        {
+            Console.WriteLine("Error: Cannot divide by zero.");
+            return float.NaN;
+        }
+        return (k / e);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        A objA = new A();
+        Console.WriteLine("Sum (Class A): " + objA.Sum(15, 16)); 
+
+        B objB = new B();
+        Console.WriteLine("Sum (Class B - Subtraction): " + objB.Sum(10, 20)); // -10
+
+        C objC = new C();
+        Console.WriteLine("Mul (Class C): " + objC.Mul(10, 2)); 
+
+        D objD = new D();
+        Console.WriteLine("Div (Class D): " + objD.Div(14, 2)); 
+
+        Console.WriteLine("Div (Class D - by zero): " + objD.Div(10, 0)); 
+
+        Console.ReadKey(); 
+    }
+}
